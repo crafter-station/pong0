@@ -1,24 +1,53 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🎾 Tennis0
 
-## Getting Started
+AI-powered tennis game where you play against different LLM models through Vercel AI Gateway.
 
-First, run the development server:
+## Features
 
+- Play tennis against 25+ different AI models
+- Real-time AI decision making with strategic reasoning
+- Beautiful tennis court graphics with realistic physics
+- Mobile and desktop support
+- Model selection from various providers (OpenAI, Meta, Google, Mistral, etc.)
+
+## Setup
+
+1. Get your AI Gateway API key from [Vercel AI Gateway](https://vercel.com/ai-gateway)
+
+2. Create a `.env.local` file in the project root:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+AI_GATEWAY_API_KEY=your_ai_gateway_api_key_here
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+3. Install dependencies and run:
+```bash
+npm install
+npm run dev
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+4. Open [http://localhost:3000](http://localhost:3000) to play
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## How to Play
+
+- **Desktop**: Move your mouse to control the paddle
+- **Mobile**: Touch and drag to move your paddle
+- First to 5 points wins!
+- Choose different AI models to experience different playing styles
+
+## AI Models Available
+
+The game uses Vercel AI Gateway to access models from:
+- **OpenAI**: GPT-4o Mini, GPT-5 Nano, GPT-4.1 Nano
+- **Meta**: Llama 3.3 70B, Llama 4 Scout, Llama 4 Maverick  
+- **Google**: Gemini 2.0 Flash, Gemini 2.5 Flash Lite
+- **Mistral**: Ministral 3B/8B, Codestral, Devstral Small
+- **Amazon**: Nova Micro, Nova Lite
+- **Alibaba**: Qwen 3 14B/30B/32B
+- **DeepSeek**: DeepSeek V3
+- **xAI**: Grok 3 Mini
+- **Cohere**: Command R
+
+Each model has its own playing personality and strategy!
 
 ## Learn More
 

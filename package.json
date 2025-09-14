@@ -61,7 +61,6 @@
     "vaul": "^0.9.9",
     "zod": "3.25.67",
     "ai": "5.0.44",
-    "@ai-sdk/groq": "2.0.19",
     "motion": "12.23.12"
   },
   "devDependencies": {

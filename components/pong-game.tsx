@@ -18,7 +18,7 @@ import {
   COURT_BOUNDS 
 } from "@/constants/game"
 
-export default function TennisGame() {
+export default function PongGame() {
   const mouseYRef = useRef<number>(CANVAS_HEIGHT / 2)
   const touchYRef = useRef<number>(CANVAS_HEIGHT / 2)
   const [isMobile, setIsMobile] = useState(false)
@@ -264,7 +264,7 @@ export default function TennisGame() {
           </div>
           
           <a
-            href="https://github.com/crafter-station/tennis0"
+            href="https://github.com/crafter-station/pong0"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center space-x-1 text-white/40 hover:text-white/60 transition-colors duration-200"

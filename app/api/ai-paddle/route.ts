@@ -49,7 +49,7 @@ export async function POST(request: Request) {
     const { object } = await generateObject({
       model: model,
       schema: PaddleDecisionSchema,
-      prompt: `You are a tennis AI opponent controlling a tennis paddle in a game. Make a short-horizon, stable plan for paddle movement. Plans should only change on events (serve/reset, wall bounce, player/AI contact, or significant trajectory change).
+      prompt: `You are a pong AI opponent controlling a paddle in a game. Make a short-horizon, stable plan for paddle movement. Plans should only change on events (serve/reset, wall bounce, player/AI contact, or significant trajectory change).
 
 Game State:
 - Ball position: x=${ballX.toFixed(2)}, y=${ballY.toFixed(2)} (0-1 normalized)

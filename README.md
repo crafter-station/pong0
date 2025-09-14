@@ -1,12 +1,12 @@
-# 🎾 Tennis0
+# 🏓 Pong0
 
-AI-powered tennis game where you play against different LLM models through Vercel AI Gateway.
+AI-powered pong game where you play against different LLM models through Vercel AI Gateway.
 
 ## Features
 
-- Play tennis against 25+ different AI models
+- Play pong against 25+ different AI models  
 - Real-time AI decision making with strategic reasoning
-- Beautiful tennis court graphics with realistic physics
+- Beautiful tennis court-themed graphics with realistic physics
 - Mobile and desktop support
 - Model selection from various providers (OpenAI, Meta, Google, Mistral, etc.)
 
@@ -33,41 +33,6 @@ npm run dev
 - **Mobile**: Touch and drag to move your paddle
 - First to 5 points wins!
 - Choose different AI models to experience different playing styles
-
-## How It Works
-
-```mermaid
-flowchart TD
-    A[Player Input] --> B[Game Loop 60fps]
-    B --> C[Update Ball Physics]
-    C --> D[Predict Ball Trajectory]
-    D --> E{AI Decision Needed?}
-    E -->|Yes| F[Call AI API]
-    E -->|No| G[Update Game State]
-    F --> H[AI Returns Decision]
-    H --> G
-    G --> I[Move AI Paddle]
-    I --> J[Check Collisions]
-    J --> K{Point Scored?}
-    K -->|Yes| L[Reset Ball Position]
-    K -->|No| B
-    L --> B
-
-    M[Canvas Rendering] --> N[Draw Court]
-    N --> O[Draw Paddles]
-    O --> P[Draw Ball]
-    P --> Q[Draw Scores]
-
-    B --> M
-```
-
-### Game Architecture Flow
-
-1. **Player Input**: Mouse/touch movements control the player's paddle
-2. **Game Physics**: Ball movement, collisions, and trajectory calculations
-3. **AI Decision Making**: When needed, API calls to LLM models for paddle positioning
-4. **State Management**: Game state updates with scores, positions, and game status
-5. **Visual Rendering**: Real-time canvas drawing of the tennis court and elements
 
 ## AI Models Available
 

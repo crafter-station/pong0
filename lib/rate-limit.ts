@@ -87,9 +87,15 @@ export function getRemainingMatches(userFingerprint: string): number {
 // Clean up expired entries periodically
 setInterval(() => {
   const now = Date.now()
-  for (const [fingerprint, limit] of rateLimitStore.entries()) {
+  const fingerprintsToDelete: string[] = []
+
+  rateLimitStore.forEach((limit, fingerprint) => {
     if (now - limit.firstMatchTime > RATE_LIMIT_WINDOW) {
-      rateLimitStore.delete(fingerprint)
+      fingerprintsToDelete.push(fingerprint)
     }
-  }
+  })
+
+  fingerprintsToDelete.forEach(fingerprint => {
+    rateLimitStore.delete(fingerprint)
+  })
 }, 60 * 60 * 1000) // Clean up every hour

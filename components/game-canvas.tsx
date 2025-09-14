@@ -1,6 +1,6 @@
 "use client"
 
-import { useRef, useEffect, useCallback, RefObject } from "react"
+import { useRef, useEffect, useCallback, MutableRefObject } from "react"
 import { GameState } from "@/types/game"
 import { 
   CANVAS_WIDTH, 
@@ -13,8 +13,8 @@ import {
 interface GameCanvasProps {
   gameState: GameState
   isMobile: boolean
-  mouseYRef: RefObject<number>
-  touchYRef: RefObject<number>
+  mouseYRef: MutableRefObject<number>
+  touchYRef: MutableRefObject<number>
 }
 
 export const GameCanvas = ({ gameState, isMobile, mouseYRef, touchYRef }: GameCanvasProps) => {

@@ -177,12 +177,12 @@ export default function TennisGame() {
 
       return newState
     })
-  }, [isMobile, getAIDecision, aiDecision, completeMatch, shouldRefreshAI, updateAICallTime, aiTargetYRef, rallyLengthRef, lastInterceptNormRef])
+  }, [isMobile, getAIDecision, aiDecision, completeMatch, shouldRefreshAI, updateAICallTime, aiTargetYRef, rallyLengthRef, lastInterceptNormRef, setGameState])
 
   const gameLoop = useCallback(() => {
     updateGame()
     animationRef.current = requestAnimationFrame(gameLoop)
-  }, [updateGame])
+  }, [updateGame, animationRef])
 
   useEffect(() => {
     if (gameState.gameStarted && !gameState.gameOver) {

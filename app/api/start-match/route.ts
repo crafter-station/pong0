@@ -1,5 +1,5 @@
 import { headers } from "next/headers"
-import { generateUserFingerprint, checkRateLimit, incrementMatchCount } from "@/lib/rate-limit"
+import { generateUserFingerprint, checkRateLimit } from "@/lib/rate-limit"
 
 export async function POST() {
   try {
